@@ -30,7 +30,7 @@ function addLi(value) {
     a.style.color = 'red';
     li.appendChild(a);
     a.addEventListener("click", function () {
-        li.remove()
+        li.remove();
         a.remove();
     });
 }
@@ -43,6 +43,11 @@ document.getElementById('submit').addEventListener("click", function () {
     addLi(input.value);
     articles.push(input.value);
     content.innerText = articles.join(', ');
+});
+
+document.getElementById('sort').addEventListener("click", function () {
+   articles.sort();
+   content.innerText = articles.join(', ');
 });
 
 
